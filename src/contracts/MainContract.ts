@@ -1,4 +1,4 @@
-import { Address, beginCell, Cell, Contract, contractAddress, ContractProvider, Sender, SendMode } from "ton-core";
+import { Address, beginCell, Cell, type Contract, contractAddress, type ContractProvider, type Sender, SendMode } from "@ton/core";
 
 export type MainContractConfig = {
   number: number;
@@ -114,7 +114,7 @@ export class MainContract implements Contract {
   async getBalance(provider: ContractProvider) {
     const { stack } = await provider.get("balance", []);
     return {
-      number: stack.readNumber(),
+      balance: stack.readNumber(),
     };
   }
 }

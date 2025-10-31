@@ -15,6 +15,8 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "ton": "^6.13.1",
+    "@ton/ton": "^16.0.0",
+    "@ton/core": "^0.62.0",
     "ton-core": "^0.53.0",
     "ton-crypto": "^3.2.0",
     "vite-plugin-node-polyfills": "^0.24.0"
