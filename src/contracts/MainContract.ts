@@ -114,7 +114,7 @@ export class MainContract implements Contract {
   async getBalance(provider: ContractProvider) {
     const { stack } = await provider.get("balance", []);
     return {
-      balance: stack.readNumber(),
+      number: stack.readNumber(),
     };
   }
 }

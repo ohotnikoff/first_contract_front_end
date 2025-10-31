@@ -32,13 +32,13 @@ export function useMainContract() {
       if (!mainContract) return;
       setContractData(null);
       const val = await mainContract.getData();
-      const { balance } = await mainContract.getBalance();
+      const { number } = await mainContract.getBalance();
       setContractData({
         counter_value: val.number,
         recent_sender: val.recent_sender,
         owner_address: val.owner_address,
       });
-      setBalance(balance);
+      setBalance(number);
       await sleep(5000); // sleep 5 seconds and poll value again
       getValue();
     }
